@@ -3,13 +3,13 @@ const settings = {
   "state": {
     "frontity": {
       "url": "https://test.frontity.io",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "title": "ReactPress",
+      "description": "Blog para aprender Javascript \"deeply\" con WordPress"
     }
   },
   "packages": [
     {
-      "name": "@frontity/mars-theme",
+      "name": "@frontity/twentytwenty-theme",
       "state": {
         "theme": {
           "menu": [
@@ -45,7 +45,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": "https://test.frontity.io/wp-json"
+          "api": "https://reactpress.pablocianes.com/wp-json"
         }
       }
     },
