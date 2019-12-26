@@ -3,8 +3,8 @@ const settings = {
   "state": {
     "frontity": {
       "url": "https://reactpress.es/",
-      "title": "Aprende Javascript \"deeply\"",
-      "description": "Tutoriales JavaScript usando React, Frontity y WordPress"
+      "title": "ReactPress",
+      "description": "Tutoriales para aprender Javascript \"deeply\" con React, Frontity y WordPress."
     }
   },
   "packages": [
