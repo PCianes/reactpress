@@ -2,9 +2,9 @@ const settings = {
   "name": "reactpress",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.io",
-      "title": "ReactPress",
-      "description": "Blog para aprender Javascript \"deeply\" con WordPress"
+      "url": "https://reactpress.es/",
+      "title": "Aprende Javascript \"deeply\"",
+      "description": "Tutoriales JavaScript usando React, Frontity y WordPress"
     }
   },
   "packages": [
@@ -14,24 +14,12 @@ const settings = {
         "theme": {
           "menu": [
             [
-              "Home",
+              "Inicio",
               "/"
             ],
             [
-              "Nature",
-              "/category/nature/"
-            ],
-            [
-              "Travel",
-              "/category/travel/"
-            ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
+              "SumaPress",
+              "https://sumapress.com/"
             ]
           ],
           "featured": {
@@ -45,7 +33,9 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": "https://reactpress.pablocianes.com/wp-json"
+          "api": "https://reactpress.pablocianes.com/wp-json",
+          "categoryBase": "categoria",
+          "tagBase" : "etiqueta"
         }
       }
     },
