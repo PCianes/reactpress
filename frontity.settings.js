@@ -14,12 +14,28 @@ const settings = {
         "theme": {
           "menu": [
             [
-              "Inicio",
-              "/"
+              "Básico",
+              "/categoria/basico"
             ],
             [
-              "SumaPress",
-              "https://sumapress.com/"
+              "Intermedio",
+              "/categoria/intermedio"
+            ],
+            [
+              "Avanzado",
+              "/categoria/avanzado"
+            ],
+            [
+              "React",
+              "/categoria/react"
+            ],
+            [
+              "WordPress",
+              "/categoria/wordpress"
+            ],
+            [
+              "Frontity",
+              "/categoria/frontity"
             ]
           ],
           "featured": {

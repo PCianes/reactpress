@@ -18,6 +18,7 @@
     "@frontity/tiny-router": "^1.0.18",
     "@frontity/twentytwenty-theme": "./packages/twentytwenty-theme",
     "@frontity/wp-source": "^1.4.3",
-    "frontity": "^1.4.4"
+    "frontity": "^1.4.4",
+    "react-live": "^2.2.2"
   }
 }

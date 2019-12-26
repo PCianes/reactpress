@@ -2,7 +2,6 @@ import React from "react";
 import { styled, connect } from "frontity";
 import Link from "./link";
 import SectionContainer from "./styles/section-container";
-import { LoveIcon } from "./icons";
 
 // Component that provides scroll to top functionality
 const BackToTop = () => {
