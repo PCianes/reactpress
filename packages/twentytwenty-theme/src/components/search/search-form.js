@@ -37,16 +37,16 @@ const SearchForm = ({ state, actions, libraries }) => {
   return (
     <Form role="search" aria-label="404 not found" onSubmit={handleSubmit}>
       <Label>
-        <ScreenReaderText>Search for:</ScreenReaderText>
+        <ScreenReaderText>Busqueda...</ScreenReaderText>
         <SearchInput
           type="search"
           defaultValue={searchQuery}
-          placeholder="Search ..."
+          placeholder="Buscar..."
           ref={inputRef}
         />
       </Label>
       <SearchButton bg={primary} type="submit">
-        Search
+        Buscar
       </SearchButton>
     </Form>
   );

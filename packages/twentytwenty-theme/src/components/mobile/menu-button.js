@@ -18,7 +18,7 @@ const MobileMenuButton = ({ state, actions }) => {
         isMobile
         aria-expanded={isMobileMenuOpen}
         onClick={openMobileMenu}
-        aria-label="Click to open search bar..."
+        aria-label="Click para abrir barra de busqueda..."
       >
         <LabeledIcon icon={ToggleIcon} label="Menu" />
       </NavToggle>

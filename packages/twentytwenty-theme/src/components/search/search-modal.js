@@ -78,7 +78,7 @@ const SearchModal = ({ state, actions, libraries }) => {
               ref={inputRef}
               type="search"
               defaultValue={searchQuery || ""}
-              placeholder="search for:"
+              placeholder="buscar..."
               name="search"
             />
             <SearchButton bg={primary}>Search</SearchButton>

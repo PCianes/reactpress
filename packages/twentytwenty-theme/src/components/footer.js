@@ -2,6 +2,7 @@ import React from "react";
 import { styled, connect } from "frontity";
 import Link from "./link";
 import SectionContainer from "./styles/section-container";
+import { LoveIcon } from "./icons";
 
 // Component that provides scroll to top functionality
 const BackToTop = () => {
@@ -33,7 +34,7 @@ const Footer = ({ state }) => {
         <Credits>
           <Copyright>
             &copy; {currentYear}{" "}
-            <Link link={state.frontity.url}>{state.frontity.title}</Link>
+            <Link link={state.frontity.url}>{state.frontity.title} · Frontity · WordPress</Link>
           </Copyright>
         </Credits>
         <BackToTop />

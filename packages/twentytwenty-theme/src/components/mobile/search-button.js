@@ -18,9 +18,9 @@ const MobileSearchButton = ({ state, actions }) => {
         isMobile
         aria-expanded={isSearchModalOpen}
         onClick={openSearchModal}
-        aria-label="Click to open search bar..."
+        aria-label="Click para abrir la barra de busqueda..."
       >
-        <LabeledIcon icon={SearchIcon} label="Search" />
+        <LabeledIcon icon={SearchIcon} label="Buscar" />
       </SearchToggle>
     </ToggleWrapper>
   );

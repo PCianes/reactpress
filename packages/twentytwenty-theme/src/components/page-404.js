@@ -6,10 +6,9 @@ import SectionContainer from "./styles/section-container";
 // The 404 page component
 const Page404 = () => (
   <Container size="thin">
-    <EntryTitle>Page Not Found</EntryTitle>
+    <EntryTitle>Página no encontrada</EntryTitle>
     <IntroText>
-      The page you were looking for could not be found. It might have been
-      removed, renamed, or did not exist in the first place. Search for:
+      No se pudo encontrar la página que estabas buscando.
     </IntroText>
     <SearchForm />
   </Container>

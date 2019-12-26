@@ -7,7 +7,7 @@ const Header = ({ label, children, labelColor }) => {
     <ArchiveHeader>
       <ArchiveHeaderInner>
         <ArchiveTitle>
-          <ColoredText color={labelColor}>{label}: </ColoredText>
+          <ColoredText color={labelColor}>{ "category" == label ? "Categoría" : label }: </ColoredText>
           {children}
         </ArchiveTitle>
       </ArchiveHeaderInner>
