@@ -44,7 +44,7 @@ const MobileMenuModal = ({ state, actions }) => {
               aria-expanded={isMobileMenuOpen}
               onClick={closeMobileMenu}
             >
-              <ToggleText> Close Menu</ToggleText>
+              <ToggleText> Cerrar Menu</ToggleText>
               <CloseIcon />
             </CloseNavToggle>
 

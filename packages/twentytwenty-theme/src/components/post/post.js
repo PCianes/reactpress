@@ -81,7 +81,7 @@ const Post = ({ state, actions, libraries }) => {
 
       {/* If the post has an excerpt (short summary text), we render it */}
       {post.content && (
-        <PostInner size="thin">
+        <PostInner size="small">
           <EntryContent>
             <Html2React html={post.content.rendered} />
           </EntryContent>

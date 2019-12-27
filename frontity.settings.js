@@ -18,10 +18,6 @@ const settings = {
               "/categoria/basico"
             ],
             [
-              "Intermedio",
-              "/categoria/intermedio"
-            ],
-            [
               "Avanzado",
               "/categoria/avanzado"
             ],

@@ -70,7 +70,7 @@ const PostItem = ({
 
       {/* If the post has an excerpt (short summary text), we render it */}
       {content && (
-        <PostInner size="thin">
+        <PostInner size="small">
           {/* TODO: Change this to HTML2React */}
           {/* dangerouslySetInnerHTML={{ __html: content.rendered }} */}
           <EntryContent>
@@ -150,7 +150,7 @@ export const PostInner = styled(SectionContainer)`
 
 export const EntryContent = styled.div`
   line-height: 1.5;
-  max-width: 58rem;
+  max-width: 80rem;
   font-family: "Hoefler Text", Garamond, "Times New Roman", serif;
   letter-spacing: normal;
 

@@ -295,6 +295,10 @@ const elementBase = colors => css`
   a:focus {
     text-decoration: none;
   }
+
+  .has-text-align-center {
+    text-align: center;
+  }
 `;
 
 const listStyle = css`
@@ -440,6 +444,7 @@ const mediaStyle = colors => css`
   iframe {
     display: block;
     max-width: 100%;
+    margin: 0 auto;
   }
 
   video {
