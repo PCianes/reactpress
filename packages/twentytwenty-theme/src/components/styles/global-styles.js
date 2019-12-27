@@ -443,6 +443,7 @@ const mediaStyle = colors => css`
 
   iframe {
     display: block;
+    min-width: 100%;
     max-width: 100%;
     margin: 0 auto;
   }
