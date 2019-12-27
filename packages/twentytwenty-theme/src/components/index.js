@@ -33,6 +33,7 @@ const Theme = ({ state, libraries }) => {
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
+        <link rel="canonical" href="https://reactpress.es/" />
       </Head>
 
       {/* Accessibility: Provides ability to skip to main content */}
