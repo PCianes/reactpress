@@ -2,6 +2,7 @@ import React from "react";
 import { styled, connect } from "frontity";
 import Link from "./link";
 import SectionContainer from "./styles/section-container";
+import { NewsLetter } from "./custom/newsletter";
 
 // Component that provides scroll to top functionality
 const BackToTop = () => {
@@ -29,6 +30,7 @@ const Footer = ({ state }) => {
 
   return (
     <SiteFooter bg={footerBg} role="contentinfo">
+      <NewsLetter/>
       <SiteFooterInner>
         <Credits>
           <Copyright>
