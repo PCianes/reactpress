@@ -35,7 +35,7 @@ const Footer = ({ state }) => {
         <Credits>
           <Copyright>
             &copy; {currentYear}{" "}
-            <Link link={state.frontity.url}>{state.frontity.title} · Frontity · WordPress</Link>
+            <Link link={state.frontity.url}>{state.frontity.title}</Link>
           </Copyright>
         </Credits>
         <BackToTop />
