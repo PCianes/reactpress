@@ -15,23 +15,23 @@ const settings = {
           "menu": [
             [
               "Básico",
-              "/categoria/basico"
+              "/javascript/basico"
             ],
             [
               "Avanzado",
-              "/categoria/avanzado"
+              "/javascript/avanzado"
             ],
             [
               "React",
-              "/categoria/react"
+              "/javascript/react"
             ],
             [
               "WordPress",
-              "/categoria/wordpress"
+              "/javascript/wordpress"
             ],
             [
               "Frontity",
-              "/categoria/frontity"
+              "/javascript/frontity"
             ]
           ],
           "featured": {
@@ -46,8 +46,8 @@ const settings = {
       "state": {
         "source": {
           "api": "https://reactpress.pablocianes.com/wp-json",
-          "categoryBase": "categoria",
-          "tagBase" : "etiqueta"
+          "categoryBase": "javascript",
+          "tagBase" : "categoria"
         }
       }
     },
