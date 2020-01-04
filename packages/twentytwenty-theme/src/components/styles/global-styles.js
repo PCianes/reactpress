@@ -452,6 +452,10 @@ const mediaStyle = colors => css`
     display: block;
   }
 
+  .wp-block-embed-youtube iframe {
+    height: 450px;
+  }
+
   svg,
   img,
   embed,
