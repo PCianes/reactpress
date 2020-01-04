@@ -36,7 +36,7 @@ const settings = {
           ],
           "featured": {
             "showOnList": false,
-            "showOnPost": false
+            "showOnPost": true
           }
         }
       }
