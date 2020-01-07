@@ -22,6 +22,10 @@ const settings = {
               "/javascript/avanzado"
             ],
             [
+              "Retos",
+              "/javascript/reto"
+            ],
+            [
               "React",
               "/javascript/react"
             ],
