@@ -456,6 +456,10 @@ const mediaStyle = colors => css`
     height: 450px;
   }
 
+  .react-tabs__tab svg {
+    color: #F8931F;
+  }
+
   svg,
   img,
   embed,
