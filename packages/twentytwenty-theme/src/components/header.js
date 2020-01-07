@@ -7,44 +7,41 @@ import SearchModal from "./search/search-modal";
 import MobileSearchButton from "./mobile/search-button";
 import MobileMenuButton from "./mobile/menu-button";
 import MobileMenuModal from "./mobile/menu-modal";
-import Headroom from "react-headroom";
 
 const Header = ({ state }) => {
   const { title, description } = state.frontity;
   const { headerBg } = state.theme.colors;
 
   return (
-    <Headroom>
-      <PageHeader bg={headerBg} id="site-header">
-        <HeaderInner>
-          <TitleWrapper>
-            {/* Search button on mobile */}
-            {state.theme.showSearchInHeader && <MobileSearchButton />}
+    <PageHeader bg={headerBg} id="site-header">
+      <HeaderInner>
+        <TitleWrapper>
+          {/* Search button on mobile */}
+          {state.theme.showSearchInHeader && <MobileSearchButton />}
 
-            {/* Heading and Description of the site */}
-            <TitleGroup>
-              <SiteTitle>
-                <StyledLink link="/">{title}</StyledLink>
-              </SiteTitle>
-              <SiteDescription>{description}</SiteDescription>
-            </TitleGroup>
+          {/* Heading and Description of the site */}
+          <TitleGroup>
+            <SiteTitle>
+              <StyledLink link="/">{title}</StyledLink>
+            </SiteTitle>
+            <SiteDescription>{description}</SiteDescription>
+          </TitleGroup>
 
-            {/* Mobile menu button and modal */}
-            <MobileMenuButton />
-            <MobileMenuModal />
-          </TitleWrapper>
+          {/* Mobile menu button and modal */}
+          <MobileMenuButton />
+          <MobileMenuModal />
+        </TitleWrapper>
 
-          <HeaderNavigationWrapper>
-            {/* Desktop navigation links */}
-            <Navigation />
-            {/* Desktop search button */}
-            {state.theme.showSearchInHeader && <SearchButton />}
-          </HeaderNavigationWrapper>
-        </HeaderInner>
-        {/* Global search modal */}
-        <SearchModal />
-      </PageHeader>
-    </Headroom>
+        <HeaderNavigationWrapper>
+          {/* Desktop navigation links */}
+          <Navigation />
+          {/* Desktop search button */}
+          {state.theme.showSearchInHeader && <SearchButton />}
+        </HeaderNavigationWrapper>
+      </HeaderInner>
+      {/* Global search modal */}
+      <SearchModal />
+    </PageHeader>
   );
 };
 
