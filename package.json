@@ -11,7 +11,9 @@
     "build": "frontity build",
     "serve": "frontity serve"
   },
-  "engines": { "node": "12.x" },
+  "engines": {
+    "node": "12.x"
+  },
   "prettier": {},
   "dependencies": {
     "@frontity/core": "^1.4.1",
@@ -20,6 +22,7 @@
     "@frontity/twentytwenty-theme": "./packages/twentytwenty-theme",
     "@frontity/wp-source": "^1.4.3",
     "frontity": "^1.4.4",
+    "react-headroom": "^3.0.0",
     "react-icons": "^3.8.0",
     "react-live": "^2.2.2",
     "react-tabs": "^3.1.0"
