@@ -13,6 +13,8 @@ import PostCategories from "./post-categories";
 import PostMeta from "./post-meta";
 import PostTags from "./post-tags";
 
+import { PostTabs } from "../custom/post-tabs";
+
 const Post = ({ state, actions, libraries }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
@@ -78,12 +80,11 @@ const Post = ({ state, actions, libraries }) => {
       {state.theme.featuredMedia.showOnPost && (
         <FeaturedImage id={post.featured_media} isSinglePost={true} />
       )}
-
       {/* If the post has an excerpt (short summary text), we render it */}
       {post.content && (
         <PostInner size="small">
-          <EntryContent>
-            <Html2React html={post.content.rendered} />
+          <EntryContent>  
+            <PostTabs post={ post } html={ Html2React }/>
           </EntryContent>
           {/* If the post has tags, render it */}
           {post.tags && <PostTags tags={tags} />}
