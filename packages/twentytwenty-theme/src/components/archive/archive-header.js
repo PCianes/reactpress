@@ -1,10 +1,11 @@
-import { styled } from "frontity";
+import { connect, styled, css } from "frontity";
 import React from "react";
 import SectionContainer from "../styles/section-container";
 
-const Header = ({ label, children, labelColor }) => {
+const Header = ({ state, label, children, labelColor }) => {
+  const { mode } = state.theme;
   return (
-    <ArchiveHeader>
+    <ArchiveHeader css={css`background-color: ${ 'light' === mode ? "#fff" : "#222" };`}>
       <ArchiveHeaderInner>
         <ArchiveTitle>
           <ColoredText color={labelColor}>{ "category" == label ? "Categoría" : label }: </ColoredText>
@@ -15,7 +16,8 @@ const Header = ({ label, children, labelColor }) => {
   );
 };
 
-export default Header;
+export default connect(Header);
+
 
 const ArchiveHeader = styled.header`
   color: #000000;

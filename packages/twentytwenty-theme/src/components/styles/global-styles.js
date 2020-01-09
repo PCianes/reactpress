@@ -68,15 +68,15 @@ const cssReset = css`
   }
 `;
 
-const documentSetup = colors => css`
+const documentSetup = ( colors, mode ) => css`
   html {
     font-size: 62.5%; /* 1rem = 10px */
   }
 
   body {
-    background: ${colors.bodyBg};
+    background: ${ 'light' === mode ? colors.bodyBg : colors.dark };
     box-sizing: border-box;
-    color: #000;
+    color: ${ 'light' === mode ? "#000" : colors.bodyBg };
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
       Helvetica, sans-serif;
     font-size: 1.8rem;
@@ -532,10 +532,10 @@ const tableStyles = colors => css`
   }
 `;
 
-const globalStyle = (colors, fontSets) =>
+const globalStyle = (colors, fontSets, mode ) =>
   css([
     cssReset,
-    documentSetup(colors),
+    documentSetup(colors, mode ),
     fontFace(fontSets),
     accessibilitySettings,
     elementBase(colors),

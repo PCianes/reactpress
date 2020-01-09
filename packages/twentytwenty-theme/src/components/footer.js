@@ -3,6 +3,7 @@ import { styled, connect } from "frontity";
 import Link from "./link";
 import SectionContainer from "./styles/section-container";
 import { NewsLetter } from "./custom/newsletter";
+import ThemeMode from "./custom/theme-mode";
 
 // Component that provides scroll to top functionality
 const BackToTop = () => {
@@ -34,8 +35,10 @@ const Footer = ({ state }) => {
       <SiteFooterInner>
         <Credits>
           <Copyright>
-            &copy; {currentYear}{" "}
-            <Link link={state.frontity.url}>{state.frontity.title}</Link>
+            &copy; {currentYear}{" · "}
+            <StyledLink link={state.frontity.url}>{state.frontity.title}</StyledLink>
+            {" · "}
+            <ThemeMode />
           </Copyright>
         </Credits>
         <BackToTop />
@@ -80,6 +83,8 @@ const Credits = styled.div`
 `;
 
 const Copyright = styled.p`
+  display: flex;
+  align-items: center;
   font-weight: 600;
   margin: 0;
 
@@ -88,12 +93,6 @@ const Copyright = styled.p`
   }
 `;
 
-const PoweredBy = styled.p`
-  color: #6d6d6d;
-  display: none;
-  margin: 0 0 0 2.4rem;
-
-  @media (min-width: 700px) {
-    display: block;
-  }
+const StyledLink = styled(Link)`
+  margin: 0px 5px;
 `;

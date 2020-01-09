@@ -22,11 +22,13 @@ const Theme = ({ state, libraries }) => {
   // Check if the url is a search type
   const isSearch = Boolean(parse.query["s"]);
 
+  const { mode } = state.theme;
+
   return (
     <>
       {/* Add some global styles for the whole site, like body or a's. 
         Not classes here because we use CSS-in-JS. Only global HTML tags. */}
-      <Global styles={globalStyles(state.theme.colors, state.theme.fontSets)} />
+      <Global styles={globalStyles(state.theme.colors, state.theme.fontSets, mode )} />
 
       {/* Add some metatags to the <head> of the HTML. */}
       <MetaTitle />

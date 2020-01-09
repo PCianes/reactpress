@@ -25,7 +25,8 @@ const twentyTwentyTheme = {
         primary: "#F8931F",
         headerBg: "#f5efe0",
         footerBg: "#f5efe0",
-        bodyBg: "#ffffff"
+        bodyBg: "#ffffff",
+        dark: "#222"
       },
       // Whether to show the search button in page header
       showSearchInHeader: true,
@@ -50,7 +51,8 @@ const twentyTwentyTheme = {
        * At the moment, we only include the ascii characters of Inter font.
        * Values can be "us-ascii" | "latin" | "all"
        */
-      fontSets: "all"
+      fontSets: "all",
+      mode : 'light'
     }
   },
   /**
@@ -70,6 +72,12 @@ const twentyTwentyTheme = {
       },
       closeSearchModal: ({ state }) => {
         state.theme.isSearchModalOpen = false;
+      },
+      setLightMode: ({ state }) => {
+        state.theme.mode = 'light';
+      },
+      setDarkMode: ({ state }) => {
+        state.theme.mode = 'dark';
       }
     }
   },

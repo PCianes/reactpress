@@ -1,5 +1,5 @@
 import React from "react";
-import { connect, styled } from "frontity";
+import { connect, styled, css } from "frontity";
 import Archive from "../archive";
 import ArchiveHeader from "../archive/archive-header";
 import SectionContainer from "../styles/section-container";
@@ -23,17 +23,20 @@ const SearchResults = ({ state, libraries }) => {
   // Since we formatted the query string in the search modal, let's reverse the formatting
   const reverseFormat = query => query.replace("+", " ");
 
+  const { mode } = state.theme;
+  const stateColor = 'light' === mode ? "#000" : "#fff";
+
   return (
     <>
       <ArchiveHeader label="Busqueda" labelColor={primary}>
-        <span>{`“${reverseFormat(searchQuery)}”`}</span>
+        <span css={css`color: ${ stateColor } `}>{`“${reverseFormat(searchQuery)}”`}</span>
         <IntroText size="thin">
           {isEmpty ? (
-            <Text>
+            <Text css={css`color: ${ stateColor } `}>
               No fue posible encontrar ningún resultado para la búsqueda. Prueba nuevamente.
             </Text>
           ) : (
-            <Text>
+            <Text css={css`color: ${ stateColor } `}>
               Se han encontrado {total} {total === 1 ? "resultado" : "resultados"} para la busqueda.
             </Text>
           )}

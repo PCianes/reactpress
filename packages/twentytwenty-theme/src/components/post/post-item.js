@@ -1,5 +1,5 @@
 import React from "react";
-import { connect, styled } from "frontity";
+import { connect, styled, css } from "frontity";
 import Link from "../link";
 import FeaturedMedia from "./featured-media";
 import PostMeta from "./post-meta";
@@ -40,6 +40,9 @@ const PostItem = ({
 
   const content = showExcerpt ? item.excerpt : item.content;
   const { Component: Html2React } = libraries.html2react;
+
+  const { mode } = state.theme;
+
   return (
     <Post>
       <PostHeader>
@@ -48,7 +51,7 @@ const PostItem = ({
           {item.categories && <PostCategories categories={categories} />}
 
           {/* The clickable heading for the post */}
-          <PostLink link={item.link}>
+          <PostLink link={item.link} css={css`color: ${ 'light' === mode ? "#000" : "#fff" };`}>
             <PostTitle
               className="heading-size-1"
               dangerouslySetInnerHTML={{ __html: item.title.rendered }}

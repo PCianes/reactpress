@@ -1,4 +1,4 @@
-import { connect } from "frontity";
+import { connect, css } from "frontity";
 import React, { Fragment, useEffect } from "react";
 import Article from "../post/post-item";
 import ArchiveHeader from "./archive-header";
@@ -10,6 +10,7 @@ const Archive = ({ state, showExcerpt, showMedia }) => {
   // Get the data of the current list.
   const data = state.source.get(state.router.link);
   const { primary } = state.theme.colors;
+  const { mode } = state.theme;
 
   // Whether the show the excerpt instead of the full content
   // If passed as prop, we'll respect that. Else, we'll use the theme settings
@@ -24,7 +25,7 @@ const Archive = ({ state, showExcerpt, showMedia }) => {
       {/* If the list is a taxonomy, we render a title. */}
       {data.isTaxonomy && (
         <ArchiveHeader labelColor={primary} label={data.taxonomy}>
-          <span>{state.source[data.taxonomy][data.id].name}</span>
+          <span css={css`color: ${ 'light' === mode ? "#000" : "#fff" };`}>{state.source[data.taxonomy][data.id].name}</span>
         </ArchiveHeader>
       )}
 

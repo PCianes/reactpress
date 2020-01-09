@@ -1,4 +1,4 @@
-import { styled, connect } from "frontity";
+import { styled, connect, css } from "frontity";
 import React, { useEffect } from "react";
 import FeaturedMedia from "./featured-media";
 import {
@@ -45,6 +45,8 @@ const Post = ({ state, actions, libraries }) => {
    */
   const tags = post.tags && post.tags.map(tagId => allTags[tagId]);
 
+  const { mode } = state.theme;
+
   /**
    * Once the post has loaded in the DOM, prefetch both the
    * home posts and the list component so if the user visits
@@ -53,11 +55,11 @@ const Post = ({ state, actions, libraries }) => {
   useEffect(() => {
     actions.source.fetch("/");
   }, []);
-
+  
   // Load the post, but only if the data is ready.
   return data.isReady ? (
     <PostArticle>
-      <Header>
+      <Header css={css`background-color: ${ 'light' === mode ? "#fff" : "#222" };`}>
         <SectionContainer>
           {/* If the post has categories, render the categories */}
           {post.categories && <PostCategories categories={categories} />}
@@ -119,7 +121,6 @@ const FeaturedImage = styled(FeaturedMedia)`
   }
 
   &:before {
-    background: #fff;
     content: "";
     display: block;
     position: absolute;

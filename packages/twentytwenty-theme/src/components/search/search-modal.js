@@ -155,7 +155,7 @@ const SearchInput = styled.input`
   background: none;
   border: none;
   border-radius: 0;
-  color: inherit;
+  color: #000;
   display: block;
   font-size: 2rem;
   letter-spacing: -0.0277em;
